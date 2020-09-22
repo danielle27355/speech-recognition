@@ -6,6 +6,7 @@
 </head>
 <body>
 
+  <div class="intro">Your speech generated below, speak!</div>
   <div class="words" contenteditable>
   </div>
 
@@ -30,6 +31,11 @@
                 p = document.createElement('p');
                 words.appendChild(p);
             }
+            if(transcript.includes('cat')){
+                console.log(cat)
+            }
+
+
             console.log(transcript);
     });
 
@@ -50,10 +56,16 @@
     }
 
     body {
-      background: #ffc600;
+      background: #85dbeb;
       font-family: 'helvetica neue';
       font-weight: 200;
       font-size: 20px;
+    }
+
+    .intro{
+      text-align: center;
+      margin-top: 25px;
+      font-size: 40px;
     }
 
     .words {
